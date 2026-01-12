@@ -57,13 +57,14 @@
 
 <body>
 
-<div id="countdown">02:00</div>
+<div id="countdown">00:10</div>
 <canvas id="confetti"></canvas>
 
 <script>
-/* ================= COUNTDOWN (2 MINUTES) ================= */
-let time = 10;
+/* ================= COUNTDOWN (10 SECONDS FOR TEST) ================= */
+let time = 10; // 10-second countdown for testing
 const countdownEl = document.getElementById("countdown");
+countdownEl.textContent = 00:${String(time).padStart(2,"0")}; // immediate render
 
 const timer = setInterval(() => {
   const min = Math.floor(time / 60);
